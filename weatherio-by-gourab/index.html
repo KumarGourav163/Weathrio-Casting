@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<meta lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weatherio by Gourab</title>
+
+    <meta name="title" content="weatherio">
+    <meta name="description" content="weatherio is a weather app made by Gourab">
+
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="./assets/js/app.js" type="module"></script>
+    <script src="./assets/js/route.js" type="module"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./assets/images/logo.png" width="364" height="58" alt="logo">
+                <h4>by Gourab</h4>
+            </a>
+
+            <div class="search-view" data-search-view>
+
+                <div class="search-wrapper">
+                    <input type="search" name="search" placeholder="Search city..." autocomplete="off"
+                        class="search-field" data-search-field>
+
+                    <span class="m-icon leading-icon">search</span>
+
+
+                    <button class="icon-btn leading-icon has-state" aria-label="close search" data-search-toggler>
+                        <span class="m-icon">arrow_back</span>
+                    </button>
+
+                </div>
+
+                <div class="search-result" data-search-result></div>
+
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-btn has-state" aria-label="open search" data-search-toggler>
+                    <span class="m-icon icon">search</span>
+                </button>
+
+                <a href="#/current-location" class="btn-primary has-state" data-current-location-btn>
+                    <span class="m-icon">my_location</span>
+                    <span class="span">Current Location</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <article class="container" data-container>
+
+            <div class="content-left">
+                <section class="seaction current-weather" aria-label="current weather" data-current-weather>
+                    <!-- <div class="card card-lg current-weather-card">
+                    </div> -->
+                </section>
+
+                <section class="section forecast" aria-labelledby="forecast-label" data-5-day-forecast>
+                </section>
+            </div>
+
+            <div class="content-right">
+
+                <section class="section highlights" aria-labelledby="highlights-label" data-highlights>
+                    <!-- <div class="card card-lg">
+                    </div> -->
+                </section>
+
+                <section class="section hourly-forecast" aria-label="hourly forecast" data-hourly-forecast>
+                </section>
+
+                <footer class="footer">
+                    <p class="body-3">
+                        Copyright 2024 Gourab. All Rights Reserved.
+                    </p>
+
+                    <p class="body-3">
+                        Powered By <a href="https://my-portfolio-2-drab.vercel.app/" title="Free OpenWeather Api"
+                            target="_blank" rel="noopener">
+                            <img src="./assets/images/openweather.png" width="150" height="30" loading="lazy"
+                                alt="OpenWeather">
+                        </a><br>
+                        <a href="https://github.com/KumarGourav163" target="_blank">
+                            <i class="fab fa-github icon"></i></a></li>
+                        <a href="https://www.linkedin.com/in/gourab-kumar-dash-951965245/" target="_blank">
+                            <i class="fab fa-linkedin-in icon"></i></a>
+                        <a href="https://www.instagram.com/_kumar_gourav__/" target="_blank">
+                            <i class="fab fa-instagram icon"></i></a>
+                        <a href="https://www.facebook.com/lipu.dash.5895" target="_blank">
+                            <i class="fab fa-facebook-f icon"></i></a>
+                    </p>
+                </footer>
+
+            </div>
+
+            <div class="loading" data-loading></div>
+
+        </article>
+    </main>
+
+    <section class="error-content" data-error-content>
+
+        <h2 class="heading">404</h2>
+
+        <p class="body-1">Page not found!</p>
+
+        <a href="#/weather?lat=51.5073219&lon=-0.1276474" class="btn-primary">
+            <span class="span">Go Home</span>
+        </a>
+
+    </section>
+
+</body>
+
+</html>
